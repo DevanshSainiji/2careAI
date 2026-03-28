@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: clinical-voice-backend
+    env: docker
+    dockerfilePath: ./voice-ai-clinical-booking/backend/Dockerfile
+    dockerContext: ./voice-ai-clinical-booking/backend
+    plan: free
+    region: ohio
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        value: "postgresql://user:pass@localhost:5432/clinical_ai"
+      - key: REDIS_URL
+        value: "redis://localhost:6379"
+      - key: CELERY_BROKER_URL
+        value: "redis://localhost:6379/0"
+      - key: CELERY_RESULT_BACKEND
+        value: "redis://localhost:6379/1"
+      - key: WHISPER_MODEL
+        value: base
+      - key: LOG_LEVEL
+        value: INFO
+      - key: DEBUG
+        value: "False"

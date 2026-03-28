@@ -1,0 +1,58 @@
+setuptools>=65.0.0
+wheel>=0.41.0
+
+fastapi
+uvicorn[standard]
+websockets
+python-multipart
+
+# Database
+sqlalchemy
+alembic
+psycopg2-binary
+asyncpg
+
+# Redis
+redis
+hiredis
+
+# Celery
+celery
+flower
+
+# LLM & AI
+langchain
+langgraph
+langchain-openai
+openai
+groq
+
+# Speech
+openai-whisper
+TTS
+gTTS
+elevenlabs
+soundfile
+librosa
+
+# Language Detection
+langdetect
+fasttext-wheel
+
+# Utilities
+pydantic
+pydantic-settings
+python-dotenv
+python-jose[cryptography]
+passlib[bcrypt]
+httpx
+
+# Monitoring & Logging
+structlog
+prometheus-client
+
+# Testing
+pytest
+pytest-asyncio
+pytest-cov
+httpx
